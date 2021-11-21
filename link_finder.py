@@ -30,7 +30,9 @@ def crawl(url, prev_data=set()):
                 prev_data.add(link)
         c = 0
         print("Please be patient :) It takes more time to crawl all links if call input is more than 100!")
+        # print(prev_data)
         while (list(prev_data)[c]):
+            # print(prev_data)
             ctx = ssl.create_default_context()
             url = list(prev_data)[c]
             ctx.check_hostname = False
